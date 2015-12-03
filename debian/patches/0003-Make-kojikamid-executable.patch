@@ -1,0 +1,32 @@
+From d61c1cefbe5a88ae825e55ca5d2bcbacfa66959d Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Marek=20Marczykowski-G=C3=B3recki?=
+ <marmarek@invisiblethingslab.com>
+Date: Thu, 3 Dec 2015 11:20:00 +0100
+Subject: [PATCH 3/3] Make kojikamid executable
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Organization: Invisible Things Lab
+Cc: Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>
+
+Signed-off-by: Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>
+---
+ vm/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/vm/Makefile b/vm/Makefile
+index 13e340c..a8e84fd 100644
+--- a/vm/Makefile
++++ b/vm/Makefile
+@@ -23,7 +23,7 @@ _install: kojikamid
+ 	install -p -m 755 $(BINFILES) $(DESTDIR)/usr/sbin
+ 
+ 	mkdir -p $(DESTDIR)/usr/share/kojivmd
+-	install -p -m 644 $(SHAREFILES) $(DESTDIR)/usr/share/kojivmd
++	install -p -m 755 $(SHAREFILES) $(DESTDIR)/usr/share/kojivmd
+ 
+ 	mkdir -p $(DESTDIR)/etc/kojivmd
+ 	install -p -m 644 kojivmd.conf $(DESTDIR)/etc/kojivmd/kojivmd.conf
+-- 
+2.1.4
+
