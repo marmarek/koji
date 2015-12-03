@@ -27,7 +27,7 @@ Vcs-Browser: https://anonscm.debian.org/cgit/reproducible/koji.git
 
 Package: koji
 Architecture: all
-Depends: python, ${misc:Depends}, ${python:Depends}
+Depends: python, systemd, ${misc:Depends}, ${python:Depends}
 Description: RPM-based build system
  The Fedora Project uses Koji for their build system, as do several other
  projects.
